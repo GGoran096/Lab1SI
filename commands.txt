@@ -1,0 +1,422 @@
+143086@lab200ab-ws08 MINGW64 ~
+$ git help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+143086@lab200ab-ws08 MINGW64 ~
+$ git init lab1
+Initialized empty Git repository in C:/Users/143086/lab1/.git/
+
+143086@lab200ab-ws08 MINGW64 ~
+$ notepad l1.txt
+
+143086@lab200ab-ws08 MINGW64 ~
+$ git commit -m 'Initial commit'
+fatal: Not a git repository (or any of the parent directories): .git
+
+143086@lab200ab-ws08 MINGW64 ~
+$ ls
+'3D Objects'/
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ IntelGraphicsProfiles/
+ l1.txt
+ lab1/
+ Links/
+'Local Settings'@
+ Music/
+'My Documents'@
+ NetHood@
+ NTUSER.DAT
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ NTUSER.DAT{0a5cf59f-1986-11e8-9951-d017c2980ade}.TM.blf
+ NTUSER.DAT{0a5cf59f-1986-11e8-9951-d017c2980ade}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{0a5cf59f-1986-11e8-9951-d017c2980ade}.TMContainer00000000000000000002.regtrans-ms
+ ntuser.ini
+ ntuser.pol
+ OneDrive/
+ Pictures/
+ PrintHood@
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+ Videos/
+
+143086@lab200ab-ws08 MINGW64 ~
+$ cd lab1
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ notepad l1.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git add .
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git commit -m 'Initial commit'
+[master (root-commit) 0870088] Initial commit
+ Committer: unknown <graorkovski.goran@students.finki.ukim.mk>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 l1.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ ls
+l1.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ l1.txt
+bash: l1.txt: command not found
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ notepad l1.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git add .
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git commit -m 'modify l1.txt'
+[master b7ea4c8] modify l1.txt
+ Committer: unknown <graorkovski.goran@students.finki.ukim.mk>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git remote add origin https://github.com/GGoran096/Lab1SI.git
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git push -u origin master
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 472 bytes | 118.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/GGoran096/Lab1SI.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ notepad l1.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git reset l1.txt
+Unstaged changes after reset:
+M       l1.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ notepad l1.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git add l1.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git reset l1.txt
+Unstaged changes after reset:
+M       l1.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git checkout --l1.txt
+error: unknown option `l1.txt'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git reset
+Unstaged changes after reset:
+M       l1.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git add .
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ notepad l1.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git revert l1.txt
+fatal: bad revision 'l1.txt'
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git revert
+usage: git revert [<options>] <commit-ish>...
+   or: git revert <subcommand>
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence
+    --abort               cancel revert or cherry-pick sequence
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add Signed-off-by:
+    -m, --mainline <parent-number>
+                          select mainline parent
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git reset l1.txt
+Unstaged changes after reset:
+M       l1.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ notepad l1.txty
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ notepad l1.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git reset --hard
+HEAD is now at b7ea4c8 modify l1.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ notepad l1.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git branch
+* master
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (master)
+$ git checkout -b branch1
+Switched to a new branch 'branch1'
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (branch1)
+$ git branch
+* branch1
+  master
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (branch1)
+$ git push origin branch 1
+error: src refspec branch does not match any.
+error: src refspec 1 does not match any.
+error: failed to push some refs to 'https://github.com/GGoran096/Lab1SI.git'
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (branch1)
+$ git push origin branch1
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/GGoran096/Lab1SI.git
+ * [new branch]      branch1 -> branch1
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (branch1)
+$ git branch
+* branch1
+  master
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (branch1)
+$ notepad log.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (branch1)
+$ git log
+commit b7ea4c8d28abad077bec0d9e599b8e677c57a696 (HEAD -> branch1, origin/master, origin/branch1, master)
+Author: unknown <graorkovski.goran@students.finki.ukim.mk>
+Date:   Fri Mar 16 15:46:35 2018 +0100
+
+    modify l1.txt
+
+commit 0870088df38085a2226d97d9c0351b3017d977ed
+Author: unknown <graorkovski.goran@students.finki.ukim.mk>
+Date:   Fri Mar 16 15:41:27 2018 +0100
+
+    Initial commit
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (branch1)
+$ ^C
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (branch1)
+$ notepad log.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (branch1)
+$ git branch
+* branch1
+  master
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (branch1)
+$ git checkout -b logging
+Switched to a new branch 'logging'
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (logging)
+$ git push origin logging
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/GGoran096/Lab1SI.git
+ * [new branch]      logging -> logging
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (logging)
+$ git log
+commit b7ea4c8d28abad077bec0d9e599b8e677c57a696 (HEAD -> logging, origin/master, origin/logging, origin/branch1, master, branch1)
+Author: unknown <graorkovski.goran@students.finki.ukim.mk>
+Date:   Fri Mar 16 15:46:35 2018 +0100
+
+    modify l1.txt
+
+commit 0870088df38085a2226d97d9c0351b3017d977ed
+Author: unknown <graorkovski.goran@students.finki.ukim.mk>
+Date:   Fri Mar 16 15:41:27 2018 +0100
+
+    Initial commit
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (logging)
+$ ^C
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (logging)
+$ notepad log.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (logging)
+$ git push origin logging
+Everything up-to-date
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (logging)
+$ git merge master
+Already up to date.
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (logging)
+$ git commit -m 'Commit za branch logging'
+On branch logging
+Untracked files:
+        log.txt
+
+nothing added to commit but untracked files present
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (logging)
+$ git add log.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (logging)
+$ git commit -m 'Commit za branch logging'
+[logging 8878cb8] Commit za branch logging
+ Committer: unknown <graorkovski.goran@students.finki.ukim.mk>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 11 insertions(+)
+ create mode 100644 log.txt
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (logging)
+$ git merge master
+Already up to date.
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (logging)
+$ git branch
+  branch1
+* logging
+  master
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (logging)
+$ git checkout -b allcomands
+Switched to a new branch 'allcomands'
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (allcomands)
+$ git branch
+* allcomands
+  branch1
+  logging
+  master
+
+143086@lab200ab-ws08 MINGW64 ~/lab1 (allcomands)
+$ notepad commands.txt
