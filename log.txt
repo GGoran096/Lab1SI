@@ -1,0 +1,11 @@
+commit b7ea4c8d28abad077bec0d9e599b8e677c57a696 (HEAD -> logging, origin/master, origin/logging, origin/branch1, master, branch1)
+Author: unknown <graorkovski.goran@students.finki.ukim.mk>
+Date:   Fri Mar 16 15:46:35 2018 +0100
+
+    modify l1.txt
+
+commit 0870088df38085a2226d97d9c0351b3017d977ed
+Author: unknown <graorkovski.goran@students.finki.ukim.mk>
+Date:   Fri Mar 16 15:41:27 2018 +0100
+
+    Initial commit
